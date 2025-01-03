@@ -103,7 +103,7 @@
     })()
   </script><script>const GLOBAL_CONFIG = {
   root: '/',
-  algolia: {"appId":"6961A8WZ98","apiKey":"ad199d0597e282b4d1d951ae0104280c","indexName":"克喵的部落格","hitsPerPage":6,"languages":{"input_placeholder":"搜索文章","hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，耗时 ${time} 毫秒"}},
+  algolia: undefined,
   localSearch: undefined,
   translate: undefined,
   highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
@@ -228,7 +228,7 @@
   const initWaline = (Fn, el = document, path = window.location.pathname) => {
     const waline = Fn({
       el: el.querySelector('#waline-wrap'),
-      serverURL: 'https://waline.zmrkm.cyou/',
+      serverURL: 'https://waline.zmykm.icu/',
       pageview: true,
       dark: 'html[data-theme="dark"]',
       comment: false,
@@ -273,7 +273,26 @@
   } else {
     window.loadOtherComment = loadWaline
   }
-})()</script></div><script>let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = 'da028d48294d43a07248c0b8694654e75b28a2';</script><script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.7/tianli_gpt.js"></script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div>
+})()</script></div><script>let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = 'da028d48294d43a07248c0b8694654e75b28a2';</script><script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.7/tianli_gpt.js"></script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="docsearch-wrap"><div id="docsearch" style="display:none"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css/dist/style.min.css"><script src="https://cdn.jsdelivr.net/npm/@docsearch/js/dist/umd/index.min.js"></script><script>(() => {
+  docsearch(Object.assign({
+    appId: 'GO14H8XOVD',
+    apiKey: '2fcd8e44d64a5f4f9b79615780c24789',
+    indexName: 'zmrkm',
+    container: '#docsearch',
+    placeholder: '搜索文章',
+  }, null))
+
+  const handleClick = () => {
+    document.querySelector('.DocSearch-Button').click()
+  }
+
+  const searchClickFn = () => {
+    btf.addEventListenerPjax(document.querySelector('#search-button > .search'), 'click', handleClick)
+  }
+
+  searchClickFn()
+  window.addEventListener('pjax:complete', searchClickFn)
+})()</script></div></div>
     <link rel="stylesheet" href="https://ai.tianli0.top/static/public/postChatUser_summary.min.css">
     <script>
         let tianliGPT_key = '70b649f150276f289d1025508f60c5f58a';
